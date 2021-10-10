@@ -1,0 +1,31 @@
+<div class="bg-light">
+<div class="container pt-5">
+<div class="card-group">
+<div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-4 g-4">
+
+    <div class="col" *ngFor="let prObj of prodDetailsItems"> 
+        <div class="card text-center ">
+           <!-------------Image---------->
+          <div class="" style="background-color: #EDF5FC">
+
+          <img src="{{prObj.productImage}}" 
+            height="200px" max-width="200px" class="d-block mx-auto mt-2 mb-2" alt="" >
+
+          </div>
+            <div class="card-body" height="560px">
+
+              <h5 class="card-title">{{prObj.productname}}</h5>
+              
+              <p class="card-text">{{prObj.price |currency:'INR'}}</p>
+
+             <!-- button -->
+             <button class="btn btn-primary" (click)="openDetails(prObj.ind)"><i class="fas fa-cart-plus"> </i> view details</button>
+            </div>
+          </div>
+    </div>
+</div>
+</div>
+</div>
+
+
+

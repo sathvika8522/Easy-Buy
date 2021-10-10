@@ -1,0 +1,27 @@
+GET http://localhost:3000/users/getusers
+###
+
+POST http://localhost:3000/cart/addtocart
+Content-Type: application/json
+
+{
+   "productname":"Burberry",
+    "ind":8,
+    "productImage":"https://res.cloudinary.com/shankari/image/upload/v1624893331/shivaya/26a220ba5d36f3e3567509c2a7b8d149_unyih4.jpg",
+    "price":2000,
+    "model":"women",
+    "noOfItems":1,
+    "productDescription":
+    {
+        "Fabric":"crepe",
+        "pattern":"printed",
+        "Multipack":1,
+        "sizes":
+        {
+            "S":38,
+            "M":40,
+            "L":42,
+            "XL":50
+        }
+    }
+}

@@ -1,0 +1,79 @@
+<div class="wrapper">
+<div class="row">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+        <img src="https://illustratious.s3.amazonaws.com/screenshots/ov2a6o-online-school-webp.webp" alt="" 
+        width="100%" height="auto">
+   </div>
+
+<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+
+<div class="loginbody mt-3">
+    <div class="logdiv bg-light text-center p-3">
+        <img src="https://lineicons.com/static/images/login-dd0c62f040021b50d2df0e08f5f3d99e.svg"
+         alt="Image" width="45%" height="auto">
+         <h1 class="mt-3">REGISTER</h1>
+
+         <!----------------------------------- form ------------------------------------>
+
+        <form #ref="ngForm" (ngSubmit)="onregister(ref.value)" class="text-white ">
+            <!------------------------------------- row1 ---------------------------------->
+                 <div class="row">
+    
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <input type="text" id="fn" class="form-control" placeholder="Your name..."
+                          name="username" ngModel required #refun="ngModel">
+                        <p class="text-danger" *ngIf="(ref.submitted || refun.touched) && refun.errors?.required">*Username Required!!!</p>
+                    </div>
+                </div>
+    
+    
+             <!------------------------------------ row-2 ----------------------------------->
+    
+                <div class="row mt-3">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <input type="password"  id="pw" class="form-control" placeholder="Enter Your Password...."
+                         name="password" ngModel required #refup="ngModel">
+                         <p class="text-danger" *ngIf="(ref.submitted || refup.touched) && refup.errors?.required">*Password Required!!!</p>
+                    </div>
+                </div>
+            
+            <!-------------------------------------- row-3  ---------------------------------->
+            <div class="row mt-3">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                    <input type="date" id="db" class="form-control" placeholder="Select your date of Birth........."  name="dob" ngModel>
+                </div>
+            </div>
+    
+        
+            <!--------------------------------------- row-4 ----------------------------------->
+            <div class="row mt-3">
+               
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                    <input type="email"  id="eid" class="form-control" placeholder="Enter Your EmailId.........."  
+                    name="EmailId" ngModel required #refue="ngModel">
+                    <p class="text-danger" *ngIf="(ref.submitted || refue.touched) && refue.errors?.required">*Email Required!!!</p>
+                </div>
+            </div>
+
+            <!--------------------------------------- row-5 ----------------------------------->
+             <div class="row mt-3">
+               
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                   <input type="file" name="photo" (change)="selectFile($event)" ngModel>
+                </div>
+            </div> 
+
+
+           
+            <!-----------------------------------submit button ----------------------------->
+            <div class="mt-5">
+                <button class="btn btn-primary d-block mx-auto">
+                    <i class="fas fa-sign-in-alt"></i> Register</button>
+            </div>
+            
+     </form>
+    </div>
+</div>
+</div>
+</div>
+</div>

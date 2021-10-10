@@ -1,0 +1,84 @@
+<!-- <div class="container">
+<table class="table text-center text-white mt-5">
+    <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">Image</th>
+          <th scope="col">Product-Name</th>
+          <th scope="col">Items-Count</th>
+          <th scope="col">price</th>
+          <th scope="col">Details</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let cartprodObj of cartProducts">
+          <th scope="row" class="text-center"><i class="fas fa-gift fa-2x text-white"></i></th>
+        
+          <td><img src="{{cartprodObj.productImage}}" 
+            height="80px" max-width="100px" alt=""></td>
+       
+            <td class="text-center">{{cartprodObj.productname}}</td>
+       
+        <td class="text-center">{{cartprodObj.noOfItems}}</td>
+        
+          <td class="text-center">{{cartprodObj.price}} </td>
+        
+        <td class="text-center">
+            <button class="btn text-white" style="background-color: darkblue;font-weight: bolder;" 
+              (click)="openProductDetails(cartprodObj.ind)" >Details
+            </button>
+        </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+ -->
+ 
+<div class="">
+<div class="container pt-5" style="font-family: 'Festive', cursive;font-family: 'Uchen', serif;">
+  <div class="card-group">
+  <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 g-4">
+    <div class="col" *ngFor="let cartprodObj of cartProducts">
+      <!-- card -->
+      <div class="card mb-3" style="max-width: 600px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{{cartprodObj.productImage}}" class="w-100" height="250px"
+              (click)="openProductDetails(cartprodObj.ind)" alt="Image">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h3 class="card-title mt-3" style="font-size: x-large;font-weight: bolder;">{{cartprodObj.productname}}</h3>
+              <h5>{{cartprodObj.price  |  currency:'INR'}}</h5>
+              <!-- <p *ngIf="!count>1">Number of Items selected : {{cartprodObj.noOfItems}}</p> -->
+              <p>Number of Items selected : {{count}}</p>
+
+              <div class="buttonclass">
+              <button class="btn text-white" (click)="addItem(cartprodObj)"
+                 style="background-color: rgb(3, 3, 80);font-weight: bolder;">
+                 <i class="fas fa-plus"></i>   
+              </button>
+              <button class="btn text-white" (click)="removeItem(cartprodObj.ind)"
+                 style="background-color: rgb(3, 3, 80);font-weight: bolder;">  
+                 <i class="fas fa-minus"></i>
+              </button>
+            </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- button to purchase -->
+  <div class="d-block mx-auto mt-4 p-2" style="max-width:500px;border-radius: 5px;background-image: linear-gradient(180deg , #ffffff , #beb8b8) ;">
+    <button class="btn d-block mx-auto text-center" style="color: deeppink;font-weight: bolder;" (click)="openPayementComp()">
+        Purchase
+    </button>
+  </div>
+  </div>
+</div>

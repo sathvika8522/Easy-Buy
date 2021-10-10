@@ -1,0 +1,19 @@
+export interface product
+{
+    id:String;
+    brand:String;
+    colorway:String;
+    gender:String;
+    name:String;
+    releaseDate:String;
+    retailPrice:number;
+    shoe:String;
+    styleId:String;
+    title:String;
+    year:String;
+    media:{
+    imageUrl:String;
+    smallImageUrl:String;
+    thumbUrl:String;
+    }
+}

@@ -1,0 +1,24 @@
+.card {
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+    box-shadow: 0 10px 15px 0 rgb(0 0 0 / 50%);
+}
+.card:hover {
+    top: -10;
+    box-shadow: 0 2px 3px 0 rgb(0 0 0 / 50%);
+}
+.container
+{
+   /* font-family: 'Cookie', cursive;
+    font-family: 'Festive', cursive;
+    font-family: 'Lobster', cursive;
+    font-family: 'Uchen', serif;*/
+    font-family: 'Festive', cursive;
+    font-family: 'Uchen', serif;
+}
+.card-title
+{
+  font-weight:bolder ;
+  font-size:x-large ;
+}
