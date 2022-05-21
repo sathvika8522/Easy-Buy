@@ -16,7 +16,7 @@ const addToCartapp = require('./APIS/addToCart-api')
 
 //-----------------------------mongodb connection setting--------------------------
 //data base url
-const databaseurl='mongodb+srv://firstdb:firstdb@shankari.y5ud8.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+const databaseurl
 
 //----------------------------connecting to our database-------------------------------
 mc.connect(databaseurl,{useNewUrlParser:true,useUnifiedTopology:true},(err,client)=>
